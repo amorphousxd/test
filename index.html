@@ -21,15 +21,18 @@
             max-height: 500px;
             max-width: 1200px
         }
-        #graphs-selector, #time-selector{
+        #graphs-selector, #time-selector, #radio{
             display: inline-block;
+            max-height: 50px;
         }
         #graphs-selector{
-            width: 600px;
+            width: 650px;
+        }
+        #radio{
+            width: 250px;
         }
         #time-selector{
             width: 400px;
-            margin-left: 100px;
         }
         #button-panel{
             margin: 0 auto;
@@ -48,6 +51,25 @@
             text-align: center;
             padding: 4px;
         }
+        .text{
+            font-family: 'Open Sans', sans-serif;
+            line-height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .radio-button{
+            display: inline-block;
+            min-width: 40px;
+            max-width: 40px;
+            min-height: 40px;
+            max-height: 40px;
+            border: 1px solid #1abc9c;
+            border-radius: 50%;
+            cursor: pointer;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+
         .button:active, .button:hover{
             color: white;
             background: #1abc9c;
@@ -65,7 +87,7 @@
 </head>
 <body ng-app="app" ng-controller="MainCtrl">
 
-<div id="content">
+<div ng-cloak id="content">
 
     <div id="button-panel">
         <div id="graphs-selector">
@@ -80,6 +102,13 @@
             </div>
             <div class="button" ng-click="choose('time')" ng-class="{'background' : time}">
                 Время
+            </div>
+            <div class="radio-button" ng-show="hover === true" ng-class="{'background' : hover}" ng-click="toggleHover()">
+            </div>
+            <div class="radio-button"  ng-show="hover === false" ng-class="{'background' : hover}" ng-click="toggleHover()">
+            </div>
+            <div class="text">
+                Синхронизация
             </div>
         </div>
         <div id="time-selector">
