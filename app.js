@@ -78,7 +78,7 @@ angular.module('app', [
                             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
                         return monthNames[value.getMonth()]+' '+value.getDate()
                     }, type: 'date'},
-                    y: {type: 'linear', min: 0, max: getMaxValue($scope.goalsDataInN3)}
+                    y: {type: 'linear', min: 0, max: getMaxValue(data)}
                 },
                 series: [
                     {y: 'value0', color: '#e74c3c', thickness: '2px', type: 'area', striped: true, label: '230'},
@@ -93,83 +93,16 @@ angular.module('app', [
                 drawDots: true,
                 columnsHGap: 5
             }
+            return object;
         }
         $scope.penaltyDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, 'penalty_time');
         $scope.shotsDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, 'shots');
         $scope.goalsDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, ['ev_goals', 'pp_goals', 'es_goals', 'overtime_goals', 'bullet_goals']);
         $scope.timeDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, 'gamingtime');
-
-        $scope.optionsPenalty = {
-            axes: {
-                x: {key: 'x', labelFunction: function(value) {
-                    var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-                    return monthNames[value.getMonth()]+' '+value.getDate()
-                }, type: 'date'},
-                y: {type: 'linear', min: 0, max: getMaxValue($scope.penaltyDataInN3)},
-                y2: {type: 'linear', min: 0, max: getMaxValue($scope.penaltyDataInN3), labelFunction: function(value){
-                    return value;
-                }}
-            },
-            series: [
-                {y: 'value0', color: '#e74c3c', thickness: '2px', type: 'area', striped: true, label: '230'},
-                {y: 'value1', color: '#34495e', thickness: '2px', type: 'area', striped: true, label: '851'},
-                {y: 'value2', color: '#9b59b6', thickness: '2px', type: 'area', striped: true, label: '2140'},
-                {y: 'value3', axis:'y2', color: '#1abc9c', thickness: '2px', type: 'area', striped: true, label: '2182'}
-            ],
-            lineMode: 'linear',
-            tension: 0.7,
-            tooltip: {mode: 'scrubber', formatter: function(x, y, series) {if(y === -1) return 'Player ' + series.label + " didn't participate "; return 'Match ' + x.yyyymmdd('/') + ' player '+ series.label + ' : '+ y + ' seconds';}},
-            drawLegend: true,
-            drawDots: true,
-            columnsHGap: 5
-        }
-        $scope.optionsGoals = {
-            axes: {
-                x: {key: 'x', labelFunction: function(value) {
-
-                    var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-                    return monthNames[value.getMonth()]+' '+value.getDate()
-                }, type: 'date'},
-                y: {type: 'linear', min: 0, max: getMaxValue($scope.goalsDataInN3)}
-            },
-            series: [
-                {y: 'value0', color: '#e74c3c', thickness: '2px', type: 'area', striped: true, label: '230'},
-                {y: 'value1', color: '#34495e', thickness: '2px', type: 'area', striped: true, label: '851'},
-                {y: 'value2', color: '#9b59b6', thickness: '2px', type: 'area', striped: true, label: '2140'},
-                {y: 'value3', color: '#1abc9c', thickness: '2px', type: 'area', striped: true, label: '2182'}
-            ],
-            lineMode: 'linear',
-            tension: 0.7,
-            tooltip: {mode: 'scrubber', formatter: function(x, y, series) {if(y === -1) return 'Player ' + series.label + " didn't participate "; return 'Match ' + x.yyyymmdd('/') + ' player '+ series.label + ' : '+ y + ' total goals';}},
-            drawLegend: true,
-            drawDots: true,
-            columnsHGap: 5
-        }
-        $scope.optionsShots = {
-            axes: {
-                x: {key: 'x', labelFunction: function(value) {
-
-                    var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-                    return monthNames[value.getMonth()]+' '+value.getDate()
-                }, type: 'date'},
-                y: {type: 'linear', min: 0, max: getMaxValue($scope.shotsDataInN3)}
-            },
-            series: [
-                {y: 'value0', color: '#e74c3c', thickness: '2px', type: 'area', striped: true, label: '230'},
-                {y: 'value1', color: '#34495e', thickness: '2px', type: 'area', striped: true, label: '851'},
-                {y: 'value2', color: '#9b59b6', thickness: '2px', type: 'area', striped: true, label: '2140'},
-                {y: 'value3', color: '#1abc9c', thickness: '2px', type: 'area', striped: true, label: '2182'}
-            ],
-            lineMode: 'linear',
-            tension: 0.7,
-            tooltip: {mode: 'scrubber', formatter: function(x, y, series) {if(y === -1) return 'Player ' + series.label + " didn't participate "; return 'Match ' + x.yyyymmdd('/') + ' player '+ series.label + ' : '+ y + ' shots';}},
-            drawLegend: true,
-            drawDots: true,
-            columnsHGap: 5
-        }
+        $scope.optionsPenalty = $scope.createOptionsObject($scope.penaltyDataInN3, 'seconds');
+        $scope.optionsShots = $scope.createOptionsObject($scope.shotsDataInN3, 'shots');
+        $scope.optionsGoals = $scope.createOptionsObject($scope.goalsDataInN3, ' total goals');
+        $scope.optionsTime = $scope.createOptionsObject($scope.timeDataInN3, ' seconds');
 })
 
 Date.prototype.yyyymmdd = function(delimiter){
