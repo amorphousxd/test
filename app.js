@@ -8,64 +8,25 @@ angular.module('app', [
     $scope.third = [{"pk":1422842,"match_date":"2012-09-21T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":23,"winfaceoff":11,"winfaceoff_p":47.8,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1423255,"match_date":"2012-09-23T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":15,"winfaceoff":8,"winfaceoff_p":53.3,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1423711,"match_date":"2012-09-25T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":1,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":5,"pis":20.0,"faceoff":14,"winfaceoff":4,"winfaceoff_p":28.6,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1424258,"match_date":"2012-09-28T20:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1425016,"match_date":"2012-10-01T20:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":2,"winfaceoff":2,"winfaceoff_p":100.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1425335,"match_date":"2012-10-03T20:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":7,"winfaceoff":6,"winfaceoff_p":85.7,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1425587,"match_date":"2012-10-05T20:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":2,"winfaceoff":1,"winfaceoff_p":50.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1425973,"match_date":"2012-10-07T18:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":3,"winfaceoff":2,"winfaceoff_p":66.7,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1426359,"match_date":"2012-10-09T20:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":6,"winfaceoff":2,"winfaceoff_p":33.3,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1426833,"match_date":"2012-10-13T14:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":100.0,"faceoff":5,"winfaceoff":2,"winfaceoff_p":40.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1427296,"match_date":"2012-10-15T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":3,"winfaceoff":2,"winfaceoff_p":66.7,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1427834,"match_date":"2012-10-17T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1428772,"match_date":"2012-10-22T20:30:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":33.3,"faceoff":5,"winfaceoff":1,"winfaceoff_p":20.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1428925,"match_date":"2012-10-23T20:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":3,"winfaceoff":2,"winfaceoff_p":66.7,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1429569,"match_date":"2012-10-26T20:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1430087,"match_date":"2012-10-29T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":4,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1430502,"match_date":"2012-10-31T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1431050,"match_date":"2012-11-04T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1431461,"match_date":"2012-11-14T21:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1431914,"match_date":"2012-11-16T21:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":1,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":25.0,"faceoff":6,"winfaceoff":4,"winfaceoff_p":66.7,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1432685,"match_date":"2012-11-21T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":1,"winfaceoff":1,"winfaceoff_p":100.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1433066,"match_date":"2012-11-23T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":5,"winfaceoff":2,"winfaceoff_p":40.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1433486,"match_date":"2012-11-25T15:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1434140,"match_date":"2012-11-29T21:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":3,"winfaceoff":2,"winfaceoff_p":66.7,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1435030,"match_date":"2012-12-03T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":18,"winfaceoff":13,"winfaceoff_p":72.2,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1435334,"match_date":"2012-12-05T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":24,"winfaceoff":12,"winfaceoff_p":50.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1435738,"match_date":"2012-12-07T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":20,"winfaceoff":7,"winfaceoff_p":35.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1436077,"match_date":"2012-12-09T18:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":15,"winfaceoff":6,"winfaceoff_p":40.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1436403,"match_date":"2012-12-19T21:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":6,"winfaceoff":2,"winfaceoff_p":33.3,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1436825,"match_date":"2012-12-22T15:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":33.3,"faceoff":3,"winfaceoff":2,"winfaceoff_p":66.7,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1437315,"match_date":"2012-12-24T15:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":3,"winfaceoff":2,"winfaceoff_p":66.7,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1437827,"match_date":"2012-12-27T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":6,"winfaceoff":2,"winfaceoff_p":33.3,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1438326,"match_date":"2012-12-29T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":4,"winfaceoff":1,"winfaceoff_p":25.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1438669,"match_date":"2013-01-03T20:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":5,"winfaceoff":2,"winfaceoff_p":40.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1439324,"match_date":"2013-01-06T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":4,"winfaceoff":2,"winfaceoff_p":50.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null}];
     $scope.fourth = [{"pk":654838,"match_date":"2012-08-25T16:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":654967,"match_date":"2012-08-26T20:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":655012,"match_date":"2012-08-28T16:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1419767,"match_date":"2012-09-05T12:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":5,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1419840,"match_date":"2012-09-06T12:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":5,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1420267,"match_date":"2012-09-08T14:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1420760,"match_date":"2012-09-10T16:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1421380,"match_date":"2012-09-13T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":5,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1422045,"match_date":"2012-09-16T17:30:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":1,"bullet_goals":0,"shots":3,"pis":33.3,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1422824,"match_date":"2012-09-21T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1423273,"match_date":"2012-09-23T17:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":6,"pis":16.7,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1423785,"match_date":"2012-09-25T19:30:00Z","penalty_time":1,"ev_goals":1,"pp_goals":1,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":5,"pis":40.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1424240,"match_date":"2012-09-28T19:45:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1424693,"match_date":"2012-09-30T18:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1425073,"match_date":"2012-10-02T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1425780,"match_date":"2012-10-06T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1426239,"match_date":"2012-10-08T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":1,"es_goals":0,"overtime_goals":0,"win_goals":1,"bullet_goals":0,"shots":5,"pis":20.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1426585,"match_date":"2012-10-10T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1426949,"match_date":"2012-10-13T15:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1427371,"match_date":"2012-10-15T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1428658,"match_date":"2012-10-22T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1429627,"match_date":"2012-10-27T17:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":100.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1430009,"match_date":"2012-10-29T19:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":5,"pis":20.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1430389,"match_date":"2012-10-31T17:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":33.3,"faceoff":2,"winfaceoff":2,"winfaceoff_p":100.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1431312,"match_date":"2012-11-14T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1431802,"match_date":"2012-11-16T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":1,"winfaceoff":1,"winfaceoff_p":100.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1432217,"match_date":"2012-11-18T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":7,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1432837,"match_date":"2012-11-21T22:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1433255,"match_date":"2012-11-23T22:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":6,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1433711,"match_date":"2012-11-26T19:45:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":100.0,"faceoff":1,"winfaceoff":1,"winfaceoff_p":100.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1434033,"match_date":"2012-11-28T19:30:00Z","penalty_time":2,"ev_goals":2,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":1,"bullet_goals":0,"shots":5,"pis":40.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1434481,"match_date":"2012-11-30T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":1,"es_goals":0,"overtime_goals":0,"win_goals":1,"bullet_goals":0,"shots":5,"pis":20.0,"faceoff":3,"winfaceoff":2,"winfaceoff_p":66.7,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1434825,"match_date":"2012-12-02T17:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":5,"pis":20.0,"faceoff":2,"winfaceoff":1,"winfaceoff_p":50.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1435509,"match_date":"2012-12-05T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1436712,"match_date":"2012-12-21T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1437163,"match_date":"2012-12-23T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1437527,"match_date":"2012-12-26T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":2,"winfaceoff":1,"winfaceoff_p":50.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1438020,"match_date":"2012-12-28T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1438402,"match_date":"2012-12-30T14:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":5,"pis":0.0,"faceoff":1,"winfaceoff":1,"winfaceoff_p":100.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1439254,"match_date":"2013-01-06T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1439702,"match_date":"2013-01-08T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":2,"winfaceoff":1,"winfaceoff_p":50.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1440199,"match_date":"2013-01-10T19:30:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1445633,"match_date":"2013-01-13T14:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":9,"pis":11.1,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1440640,"match_date":"2013-01-17T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1441104,"match_date":"2013-01-19T15:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":1,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1441714,"match_date":"2013-01-21T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1442080,"match_date":"2013-01-23T19:30:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":25.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1442428,"match_date":"2013-01-26T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1442886,"match_date":"2013-01-28T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1443348,"match_date":"2013-01-30T19:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":33.3,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1443712,"match_date":"2013-02-01T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1444245,"match_date":"2013-02-13T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1444847,"match_date":"2013-02-15T20:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1445194,"match_date":"2013-02-17T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1446591,"match_date":"2013-02-21T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1446743,"match_date":"2013-02-22T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":1,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":100.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1447336,"match_date":"2013-02-25T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1447491,"match_date":"2013-02-26T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1448614,"match_date":"2013-03-08T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1448690,"match_date":"2013-03-09T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1448786,"match_date":"2013-03-12T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":1,"winfaceoff":0,"winfaceoff_p":0.0,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1448861,"match_date":"2013-03-13T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449105,"match_date":"2013-03-16T17:15:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449196,"match_date":"2013-03-18T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449361,"match_date":"2013-03-20T19:00:00Z","penalty_time":1,"ev_goals":1,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":33.3,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449432,"match_date":"2013-03-23T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449469,"match_date":"2013-03-24T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":4,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449523,"match_date":"2013-03-27T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":3,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449559,"match_date":"2013-03-28T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449577,"match_date":"2013-03-31T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":1,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449706,"match_date":"2013-04-02T17:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":0,"pis":null,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null},{"pk":1449724,"match_date":"2013-04-04T19:00:00Z","penalty_time":0,"ev_goals":0,"pp_goals":0,"es_goals":0,"overtime_goals":0,"win_goals":0,"bullet_goals":0,"shots":2,"pis":0.0,"faceoff":0,"winfaceoff":0,"winfaceoff_p":null,"loose_goals":null,"saves":null,"saves_p":null,"sf":null,"gamingtime":null}];
 
-        //голы
-        $scope.options2 = {
-            axes: {
-                x: {key: 'x', labelFunction: function(value) {return value;}, type: 'linear', min: 0, max: 10, ticks: 2},
-                y: {type: 'linear', min: 0, max: 1, ticks: 5},
-                y2: {type: 'linear', min: 0, max: 1, ticks: [1, 2, 3, 4]}
-            },
-            series: [
-                {y: 'value', color: '#34495e', thickness: '2px', type: 'area', striped: true, label: 'Pouet'},
-                {y: 'otherValue', axis: 'y2', color: 'light#34495e', visible: false, drawDots: true, dotSize: 2}
-            ],
-            lineMode: 'linear',
-            tension: 0.7,
-            tooltip: {mode: 'scrubber', formatter: function(x, y, series) {return 'pouet';}},
-            drawLegend: true,
-            drawDots: true,
-            columnsHGap: 5
+    var all = [];
+    all.push($scope.first);
+    all.push($scope.second);
+    all.push($scope.third);
+    all.push($scope.fourth);
+        $scope.choose = function(type){
+            $scope.penalty = false;
+            $scope.goals = false;
+            $scope.shots = false;
+            $scope.time = false;
+            $scope[type] = true;
         }
-        //удары
-        $scope.options3 = {
-            axes: {
-                x: {key: 'x', labelFunction: function(value) {return value;}, type: 'linear', min: 0, max: 10, ticks: 2},
-                y: {type: 'linear', min: 0, max: 1, ticks: 5},
-                y2: {type: 'linear', min: 0, max: 1, ticks: [1, 2, 3, 4]}
-            },
-            series: [
-                {y: 'value', color: '#34495e', thickness: '2px', type: 'area', striped: true, label: 'Pouet'},
-                {y: 'otherValue', axis: 'y2', color: 'light#34495e', visible: false, drawDots: true, dotSize: 2}
-            ],
-            lineMode: 'linear',
-            tension: 0.7,
-            tooltip: {mode: 'scrubber', formatter: function(x, y, series) {return 'pouet';}},
-            drawLegend: true,
-            drawDots: true,
-            columnsHGap: 5
+        $scope.chooseTime = function(type){
+            $scope.months = false;
+            $scope.weeks = false;
+            $scope[type] = true;
         }
-        //время на площадке
-        $scope.options4 = {
-            axes: {
-                x: {key: 'x', labelFunction: function(value) {return value;}, type: 'linear', min: 0, max: 10, ticks: 2},
-                y: {type: 'linear', min: 0, max: 1, ticks: 5},
-                y2: {type: 'linear', min: 0, max: 1, ticks: [1, 2, 3, 4]}
-            },
-            series: [
-                {y: 'value', color: '#34495e', thickness: '2px', type: 'area', striped: true, label: 'Pouet'},
-                {y: 'otherValue', axis: 'y2', color: 'light#34495e', visible: false, drawDots: true, dotSize: 2}
-            ],
-            lineMode: 'linear',
-            tension: 0.7,
-            tooltip: {mode: 'scrubber', formatter: function(x, y, series) {return 'pouet';}},
-            drawLegend: true,
-            drawDots: true,
-            columnsHGap: 5
-        }
-
-        $scope.dataToN3Form = function(){
-
-        }
+        $scope.penalty = true;
+        $scope.months = true;
         $scope.timeArray = [];
         $scope.populateTimeArray = function(array){
             for(var i = 0; i < array.length; i++){
@@ -78,28 +39,29 @@ angular.module('app', [
         $scope.populateTimeArray($scope.second);
         $scope.populateTimeArray($scope.third);
         $scope.populateTimeArray($scope.fourth);
-        console.log($scope.timeArray);
         $scope.timeArray.sort(function(a,b){
-            // Turn your strings into dates, and then subtract them
-            // to get a value that is either negative, positive, or zero.
             return new Date(a.substr(0, 4), a.substr(5, 2)-1, a.substr(8, 2)) - new Date(b.substr(0, 4),b.substr(5, 2)-1, b.substr(8, 2));
         });
-        console.log($scope.timeArray);
-        $scope.penaltyDataToN3 = function(timeArray, args){
+        $scope.fieldDataToN3 = function(timeArray, args, field){
             var result = [];
             var mappings = [];
             for(var argument = 0; argument < args.length; argument++){
                 mappings.push(args[argument].map(function(e){ return new Date(e["match_date"]).yyyymmdd('-');}));
             }
-            console.log(mappings)
             for(var i = 0; i < timeArray.length; i++){
                 var object = {};
                 object['x'] = new Date(timeArray[i].substr(0, 4), timeArray[i].substr(5, 2)-1, timeArray[i].substr(8, 2));
                 for(var j = 0; j < args.length; j++){
                     if(mappings[j].indexOf(timeArray[i]) === -1){
-                       object['value'+j] = -1;
+                       //object['value'+j] = -1;
                     } else {
-                        object['value'+j] = args[j][mappings[j].indexOf(timeArray[i])]["penalty_time"];
+                        if( Object.prototype.toString.call( field ) === '[object Array]' ) {
+                            var sum = 0;
+                            _.each(field, function(fieldElement){
+                                sum += args[j][mappings[j].indexOf(timeArray[i])][fieldElement];
+                            })
+                            object['value'+j] = sum;
+                        } else  object['value'+j] = args[j][mappings[j].indexOf(timeArray[i])][field];
                     }
                 }
                 //if(result.length<30)
@@ -107,17 +69,39 @@ angular.module('app', [
             }
             return result;
         }
-        var all = [];
-        all.push($scope.first);
-        all.push($scope.second);
-        all.push($scope.third);
-        all.push($scope.fourth);
-        $scope.penaltyDataInN3 = $scope.penaltyDataToN3($scope.timeArray, all);
-        //штрафы
+        $scope.createOptionsObject = function(data, message){
+            var object = {
+                axes: {
+                    x: {key: 'x', labelFunction: function(value) {
+
+                        var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+                        return monthNames[value.getMonth()]+' '+value.getDate()
+                    }, type: 'date'},
+                    y: {type: 'linear', min: 0, max: getMaxValue($scope.goalsDataInN3)}
+                },
+                series: [
+                    {y: 'value0', color: '#e74c3c', thickness: '2px', type: 'area', striped: true, label: '230'},
+                    {y: 'value1', color: '#34495e', thickness: '2px', type: 'area', striped: true, label: '851'},
+                    {y: 'value2', color: '#9b59b6', thickness: '2px', type: 'area', striped: true, label: '2140'},
+                    {y: 'value3', color: '#1abc9c', thickness: '2px', type: 'area', striped: true, label: '2182'}
+                ],
+                lineMode: 'linear',
+                tension: 0.7,
+                tooltip: {mode: 'scrubber', formatter: function(x, y, series) {if(y === -1) return 'Player ' + series.label + " didn't participate "; return 'Match ' + x.yyyymmdd('/') + ' player '+ series.label + ' : '+ y + ' ' + message;}},
+                drawLegend: true,
+                drawDots: true,
+                columnsHGap: 5
+            }
+        }
+        $scope.penaltyDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, 'penalty_time');
+        $scope.shotsDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, 'shots');
+        $scope.goalsDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, ['ev_goals', 'pp_goals', 'es_goals', 'overtime_goals', 'bullet_goals']);
+        $scope.timeDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, 'gamingtime');
+
         $scope.optionsPenalty = {
             axes: {
                 x: {key: 'x', labelFunction: function(value) {
-
                     var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
                         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
                     return monthNames[value.getMonth()]+' '+value.getDate()
@@ -131,7 +115,7 @@ angular.module('app', [
                 {y: 'value0', color: '#e74c3c', thickness: '2px', type: 'area', striped: true, label: '230'},
                 {y: 'value1', color: '#34495e', thickness: '2px', type: 'area', striped: true, label: '851'},
                 {y: 'value2', color: '#9b59b6', thickness: '2px', type: 'area', striped: true, label: '2140'},
-                {y: 'value3', axis:'y2', color: '#1abc9c', thickness: '2px', type: 'area', striped: true, label: '2182', lineMode: 'basis-closed'}
+                {y: 'value3', axis:'y2', color: '#1abc9c', thickness: '2px', type: 'area', striped: true, label: '2182'}
             ],
             lineMode: 'linear',
             tension: 0.7,
@@ -140,31 +124,29 @@ angular.module('app', [
             drawDots: true,
             columnsHGap: 5
         }
-        $scope.goalsDataToN3 = function(){
+        $scope.optionsGoals = {
+            axes: {
+                x: {key: 'x', labelFunction: function(value) {
 
+                    var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+                    return monthNames[value.getMonth()]+' '+value.getDate()
+                }, type: 'date'},
+                y: {type: 'linear', min: 0, max: getMaxValue($scope.goalsDataInN3)}
+            },
+            series: [
+                {y: 'value0', color: '#e74c3c', thickness: '2px', type: 'area', striped: true, label: '230'},
+                {y: 'value1', color: '#34495e', thickness: '2px', type: 'area', striped: true, label: '851'},
+                {y: 'value2', color: '#9b59b6', thickness: '2px', type: 'area', striped: true, label: '2140'},
+                {y: 'value3', color: '#1abc9c', thickness: '2px', type: 'area', striped: true, label: '2182'}
+            ],
+            lineMode: 'linear',
+            tension: 0.7,
+            tooltip: {mode: 'scrubber', formatter: function(x, y, series) {if(y === -1) return 'Player ' + series.label + " didn't participate "; return 'Match ' + x.yyyymmdd('/') + ' player '+ series.label + ' : '+ y + ' total goals';}},
+            drawLegend: true,
+            drawDots: true,
+            columnsHGap: 5
         }
-        $scope.shotsDataToN3 = function(timeArray, args){
-            var result = [];
-            var mappings = [];
-            for(var argument = 0; argument < args.length; argument++){
-                mappings.push(args[argument].map(function(e){ return new Date(e["match_date"]).yyyymmdd('-');}));
-            }
-            for(var i = 0; i < timeArray.length; i++){
-                var object = {};
-                object['x'] = new Date(timeArray[i].substr(0, 4), timeArray[i].substr(5, 2)-1, timeArray[i].substr(8, 2));
-                for(var j = 0; j < args.length; j++){
-                    if(mappings[j].indexOf(timeArray[i]) === -1){
-                        object['value'+j] = -1;
-                    } else {
-                        object['value'+j] = args[j][mappings[j].indexOf(timeArray[i])]["shots"];
-                    }
-                }
-                //if(result.length<30)
-                result.push(object);
-            }
-            return result;
-        }
-        $scope.shotsDataInN3 = $scope.shotsDataToN3($scope.timeArray, all);
         $scope.optionsShots = {
             axes: {
                 x: {key: 'x', labelFunction: function(value) {
@@ -187,9 +169,6 @@ angular.module('app', [
             drawLegend: true,
             drawDots: true,
             columnsHGap: 5
-        }
-        $scope.timeDataToN3 = function(){
-
         }
 })
 
