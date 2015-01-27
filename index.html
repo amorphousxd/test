@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <style>
+        body{
+            -webkit-user-select: none;  /* Chrome all / Safari all */
+            -moz-user-select: none;     /* Firefox all */
+            -ms-user-select: none;      /* IE 10+ */
+
+            /* No support for these yet, use at own risk */
+            -o-user-select: none;
+            user-select: none;
+        }
+        #graphs{
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 20px;
+            max-height: 500px;
+            max-width: 1200px
+        }
+        #graphs-selector, #time-selector{
+            display: inline-block;
+        }
+        #graphs-selector{
+            width: 600px;
+        }
+        #time-selector{
+            width: 400px;
+            margin-left: 100px;
+        }
+        #button-panel{
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .button{
+            display: inline-block;
+            min-width: 80px;
+            max-width: 140px;
+            max-height: 40px;
+            border: 1px solid #1abc9c;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 40px;
+            text-align: center;
+            padding: 4px;
+        }
+        .button:active, .button:hover{
+            color: white;
+            background: #1abc9c;
+        }
+        .button:active{
+            outline: none;
+            background: #16a085;
+        }
+    </style>
+</head>
+<body ng-app="app" ng-controller="MainCtrl">
+
+<div id="content">
+
+    <div id="button-panel">
+        <div id="graphs-selector">
+            <div class="button" ng-click="">
+                Штраф
+            </div>
+            <div class="button" ng-click="">
+                Голы
+            </div>
+            <div class="button" ng-click="">
+                Удары
+            </div>
+            <div class="button" ng-click="">
+                Время
+            </div>
+        </div>
+        <div id="time-selector">
+            <div class="button" ng-click="">
+По неделям
+            </div>
+            <div class="button" ng-click="">
+По месяцам
+            </div>
+        </div>
+    </div>
+    <div id="graphs" style="">
+        <linechart data="penaltyDataInN3" options="optionsPenalty" mode="" width="600" height="400"></linechart>
+        <linechart data="shotsDataInN3" options="optionsShots" mode="" width="600" height="400"></linechart>
+    </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+<script src="d3.min.js"></script>
+<script src="line-chart.min.js"></script>
+<script src="app.js" charset="UTF-8"></script>
+</body>
+</html>
