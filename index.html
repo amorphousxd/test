@@ -53,6 +53,7 @@
             line-height: 40px;
             text-align: left;
             white-space: nowrap;
+            margin-left: 5px;
         }
         .button{
             display: inline-block;
@@ -150,9 +151,22 @@
             <option>monotone</option>
         </select>
         <div class="menu-item">
+            Тип линии:
+        </div>
+        <select ng-model="lineType" style="width: 120px; margin-left: 30px">
+            <option>line</option>
+            <option>area</option>
+            <option>column</option>
+        </select>
+        <div class="menu-item">
             Минимальное значение
         </div>
         <input type="number" ng-model="min" style="width: 120px; margin-left: 30px">
+        <div class="menu-item">
+            Скругление
+        </div>
+        <input type="number" ng-model="tension" step="0.1" style="width: 120px; margin-left: 30px">
+
     </div>
     <div id="graphs" style="">
         <linechart ng-if="penalty" data="penaltyDataInN3" options="optionsPenalty" mode="" width="600" height="400"></linechart>
