@@ -55,6 +55,13 @@
             white-space: nowrap;
             margin-left: 5px;
         }
+        .attention{
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 10px;
+            font-size: 12px;
+            margin-left: 5px;
+            text-align: center;
+        }
         .button{
             display: inline-block;
             min-width: 80px;
@@ -166,7 +173,9 @@
             Скругление
         </div>
         <input type="number" ng-model="tension" step="0.1" style="width: 120px; margin-left: 30px">
-
+        <div class="attention">
+            (На скругленных графиках без синхронизации popup работают неверно)
+        </div>
     </div>
     <div id="graphs" style="">
         <linechart ng-if="penalty" data="penaltyDataInN3" options="optionsPenalty" mode="" width="600" height="400"></linechart>
