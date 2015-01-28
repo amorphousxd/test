@@ -25,6 +25,7 @@ angular.module('app', [
         all.push($scope.third);
         all.push($scope.fourth);
         $scope.type = 'bundle';
+        $scope.typeSecond = 'line';
         $scope.timeArray = [];
         $scope.populateTimeArray = function(array){
             for(var i = 0; i < array.length; i++){
@@ -98,7 +99,15 @@ angular.module('app', [
                 return new Date(a.substr(0, 4), a.substr(5, 2)-1, a.substr(8, 2)) - new Date(b.substr(0, 4),b.substr(5, 2)-1, b.substr(8, 2));
             });
             resultArray.unshift('x'+number);
-            var resultArrayData = array.map(function(e){ return e[$scope.fieldMapping[field]]});
+            var resultArrayData = array.map(function(e){
+                if( Object.prototype.toString.call( $scope.fieldMapping[field] ) === '[object Array]' ) {
+                    var sum = 0;
+                    _.each($scope.fieldMapping[field], function(fieldEntry){
+                        sum += e[fieldEntry];
+                    })
+                    return sum;
+                } else return e[$scope.fieldMapping[field]]
+            });
             resultArrayData.unshift(name);
             return {
                 array: resultArray,
@@ -141,7 +150,8 @@ angular.module('app', [
                             }
                         },
                         y: {
-                            min: $scope.min
+                            min: $scope.min,
+                            label: $scope.current
                         }
                     },
                     data: {
@@ -149,7 +159,8 @@ angular.module('app', [
                         columns: [],
                         colors: {
 
-                        }
+                        },
+                        type: $scope.typeSecond
                     },
                     point: {
                         show: false
@@ -173,7 +184,7 @@ angular.module('app', [
             $scope.time = false;
             $scope[type] = true;
             $scope.current = type;
-            $scope.refresh();
+            if($scope.current !== 'time') $scope.refresh();
         }
         $scope.chooseTime = function(type){
             $scope.months = false;
@@ -204,6 +215,9 @@ angular.module('app', [
             $scope.refresh();
         })
         $scope.$watch('lineType', function(newval, oldval){
+            $scope.refresh();
+        })
+        $scope.$watch('typeSecond', function(newval, oldval){
             $scope.refresh();
         })
     })
