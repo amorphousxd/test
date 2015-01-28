@@ -16,14 +16,16 @@
         }
         #graphs{
             margin-right: auto;
-            margin-left: auto;
-            margin-top: 20px;
+            margin-left: 200px;
             max-height: 500px;
-            max-width: 1200px
+            max-width: 1200px;
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            box-shadow: 0px 0px 12px #CBCBCB;
         }
         #graphs-selector, #time-selector, #radio{
             display: inline-block;
-            max-height: 50px;
         }
         #graphs-selector{
             width: 650px;
@@ -35,8 +37,22 @@
             width: 400px;
         }
         #button-panel{
-            margin: 0 auto;
             width: 1200px;
+            position: absolute;
+            left: 220px;
+        }
+        #menu{
+            height: 600px;
+            width: 200px !important;
+            position: absolute;
+            top: 80px;
+            box-shadow: 0px 0px 12px #CBCBCB;
+        }
+        .menu-item{
+            font-family: 'Open Sans', sans-serif;
+            line-height: 40px;
+            text-align: left;
+            white-space: nowrap;
         }
         .button{
             display: inline-block;
@@ -119,6 +135,24 @@
                 По месяцам
             </div>
         </div>
+    </div>
+    <div id="menu">
+
+        <div class="menu-item">
+            Тип графика:
+        </div>
+        <select ng-model="type" style="width: 120px; margin-left: 30px">
+            <option>linear</option>
+            <option>step-before</option>
+            <option>basis</option>
+            <option>bundle</option>
+            <option>cardinal</option>
+            <option>monotone</option>
+        </select>
+        <div class="menu-item">
+            Минимальное значение
+        </div>
+        <input type="number" ng-model="min" style="width: 120px; margin-left: 30px">
     </div>
     <div id="graphs" style="">
         <linechart ng-if="penalty" data="penaltyDataInN3" options="optionsPenalty" mode="" width="600" height="400"></linechart>
