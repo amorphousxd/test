@@ -25,6 +25,9 @@
             left: 20px;
             box-shadow: 0px 0px 12px #CBCBCB;
         }
+        #n3Charts{
+            max-height: 400px;
+        }
         #graphs-selector, #time-selector, #radio{
             display: inline-block;
         }
@@ -179,13 +182,15 @@
         </div>
     </div>
     <div id="graphs" style="">
-        <linechart ng-if="penalty" data="penaltyDataInN3" options="optionsPenalty" mode="" width="600" height="400"></linechart>
-        <linechart ng-if="shots" data="shotsDataInN3" options="optionsShots" mode="" width="600" height="400"></linechart>
-        <linechart ng-if="goals" data="goalsDataInN3" options="optionsGoals" mode="" width="600" height="400"></linechart>
+        <div id="n3Charts">
+        <linechart ng-if="penalty" data="penaltyDataInN3" options="optionsPenalty" mode="" width="600" height="300"></linechart>
+        <linechart ng-if="shots" data="shotsDataInN3" options="optionsShots" mode="" width="600" height="300"></linechart>
+        <linechart ng-if="goals" data="goalsDataInN3" options="optionsGoals" mode="" width="600" height="300"></linechart>
         <!--<linechart ng-if="time" data="timeDataInN3" options="optionsTime" mode="" width="600" height="400"></linechart>-->
         <div ng-if="time"> Везде null :(</div>
+        </div>
 
-        <div id="chart">
+        <div ng-show="!time" id="chart">
 
         </div>
     </div>
