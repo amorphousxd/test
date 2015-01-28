@@ -4,6 +4,7 @@
     <title></title>
     <meta charset="UTF-8">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='c3.css' rel='stylesheet' type='text/css'>
     <style>
         body{
             -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -17,7 +18,7 @@
         #graphs{
             margin-right: auto;
             margin-left: 200px;
-            max-height: 500px;
+            max-height: 1200px;
             max-width: 1200px;
             position: absolute;
             top: 80px;
@@ -183,12 +184,17 @@
         <linechart ng-if="goals" data="goalsDataInN3" options="optionsGoals" mode="" width="600" height="400"></linechart>
         <!--<linechart ng-if="time" data="timeDataInN3" options="optionsTime" mode="" width="600" height="400"></linechart>-->
         <div ng-if="time"> Везде null :(</div>
+
+        <div id="chart">
+
+        </div>
     </div>
 
 </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+<script src="c3.min.js"></script>
 <script src="d3.min.js"></script>
 <script src="line-chart.min.js"></script>
 <script src="underscore.min.js"></script>
