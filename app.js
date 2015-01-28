@@ -41,6 +41,8 @@ angular.module('app', [
         $scope.timeArray.sort(function(a,b){
             return new Date(a.substr(0, 4), a.substr(5, 2)-1, a.substr(8, 2)) - new Date(b.substr(0, 4),b.substr(5, 2)-1, b.substr(8, 2));
         });
+        $scope.minDate = $scope.timeArray[0];
+        $scope.maxDate = $scope.timeArray[$scope.timeArray.length - 1];
         $scope.fieldDataToN3 = function(timeArray, args, field){
             var result = [];
             var mappings = [];
@@ -95,18 +97,51 @@ angular.module('app', [
             return object;
         }
         function createC3ArrayAndData(array, number, field, name){
-            var resultArray = array.map(function(e){ return new Date(e["match_date"]).yyyymmdd('-');}).sort(function(a,b){
+            if($scope.weeks){
+                var groupedByWeek = _.groupBy(array, function(item) {
+                    return  new Date(item.match_date).getFullYear() + '-' + new Date(item.match_date).getWeekNumber() ;
+                });
+                //console.log(groupedByWeek);
+                var aggregateByWeek = _.map(groupedByWeek, function(invoiceObject, createdat) {
+                    return {
+                        date: createdat,
+                        count: _.reduce(invoiceObject, function(m,x) {
+                            return m + x[$scope.fieldMapping[field]];
+                        }, 0),
+                        time: getDateOfWeek(createdat.split('-')[1], createdat.split('-')[0])
+                    };
+                });
+                var ar = aggregateByWeek;
+            } else {
+                //console.log(aggregateByWeek)
+                var groupedByMonth = _.groupBy(array, function(item) {
+                    return item.match_date.substring(0,7);
+                });
+                //console.log(groupedByMonth)
+                var aggregateByMonth = _.map(groupedByMonth, function(invoiceObject, createdat) {
+                    return {
+                        date: createdat,
+                        count: _.reduce(invoiceObject, function(m,x) {
+                            return m + x[$scope.fieldMapping[field]];
+                        }, 0),
+                        time: (new Date(createdat.split('-')[0], createdat.split('-')[1]).getTime())
+                    };
+                });
+                var ar = aggregateByMonth;
+            }
+            //console.log(aggregateByMonth)
+            var resultArray = ar.map(function(e){ return new Date(e['time']).yyyymmdd('-');}).sort(function(a,b){
                 return new Date(a.substr(0, 4), a.substr(5, 2)-1, a.substr(8, 2)) - new Date(b.substr(0, 4),b.substr(5, 2)-1, b.substr(8, 2));
             });
             resultArray.unshift('x'+number);
-            var resultArrayData = array.map(function(e){
+            var resultArrayData = ar.map(function(e){
                 if( Object.prototype.toString.call( $scope.fieldMapping[field] ) === '[object Array]' ) {
                     var sum = 0;
                     _.each($scope.fieldMapping[field], function(fieldEntry){
                         sum += e[fieldEntry];
                     })
                     return sum;
-                } else return e[$scope.fieldMapping[field]]
+                } else return e.count;
             });
             resultArrayData.unshift(name);
             return {
@@ -144,8 +179,8 @@ angular.module('app', [
                                 format: function(value) {
                                     var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
                                         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-                                    if($scope.months) return monthNames[value.getMonth()]+' '+value.getDate();
-                                    if($scope.weeks) return value.getWeekNumber() + ' week';
+                                    if($scope.months) return monthNames[value.getMonth()]+' '+value.getDate() + ', '+ value.getFullYear();
+                                    if($scope.weeks) return value.getWeekNumber() + ' week, ' + value.getFullYear();
                                 }
                             }
                         },
@@ -205,7 +240,7 @@ angular.module('app', [
         $scope.current = 'penalty';
         $scope.months = true;
         $scope.refresh();
-        $scope.$watch('type', function(newval, oldval){
+        /*$scope.$watch('type', function(newval, oldval){
             $scope.refresh();
         })
         $scope.$watch('min', function(newval, oldval){
@@ -216,7 +251,7 @@ angular.module('app', [
         })
         $scope.$watch('lineType', function(newval, oldval){
             $scope.refresh();
-        })
+        })*/
         $scope.$watch('typeSecond', function(newval, oldval){
             $scope.refresh();
         })
@@ -235,6 +270,11 @@ Date.prototype.getWeekNumber = function(){
     d.setDate(d.getDate()+4-(d.getDay()||7));
     return Math.ceil((((d-new Date(d.getFullYear(),0,1))/8.64e7)+1)/7);
 };
+function getDateOfWeek(w, y) {
+    var d = (1 + (w - 1) * 7); // 1st of January + 7 days for each week
+
+    return new Date(y, 0, d);
+}
 function getMaxValue(array){
     var max = 0;
     for(var i = 0; i < array.length; i ++){
