@@ -10,9 +10,7 @@ angular.module('app', [
         $scope.names = ['230', '851', '2140', '2182'];
         $scope.colors = ['#e74c3c', '#34495e', '#9b59b6', '#1abc9c'];
         $scope.hover = false;
-        $scope.min = -2;
-        $scope.tension = 0.7;
-        $scope.lineType = 'line';
+        $scope.typeSecond = 'spline';
         $scope.fieldMapping = {
             'penalty': 'penalty_time',
             'shots': 'shots',
@@ -24,78 +22,6 @@ angular.module('app', [
         all.push($scope.second);
         all.push($scope.third);
         all.push($scope.fourth);
-        $scope.type = 'bundle';
-        $scope.typeSecond = 'line';
-        $scope.timeArray = [];
-        $scope.populateTimeArray = function(array){
-            for(var i = 0; i < array.length; i++){
-                if($scope.timeArray.indexOf(array[i]["match_date"]) === -1){
-                    $scope.timeArray.push(new Date(array[i]["match_date"]).yyyymmdd('-'))
-                }
-            }
-        }
-        $scope.populateTimeArray($scope.first);
-        $scope.populateTimeArray($scope.second);
-        $scope.populateTimeArray($scope.third);
-        $scope.populateTimeArray($scope.fourth);
-        $scope.timeArray.sort(function(a,b){
-            return new Date(a.substr(0, 4), a.substr(5, 2)-1, a.substr(8, 2)) - new Date(b.substr(0, 4),b.substr(5, 2)-1, b.substr(8, 2));
-        });
-        $scope.minDate = $scope.timeArray[0];
-        $scope.maxDate = $scope.timeArray[$scope.timeArray.length - 1];
-        $scope.fieldDataToN3 = function(timeArray, args, field){
-            var result = [];
-            var mappings = [];
-            for(var argument = 0; argument < args.length; argument++){
-                mappings.push(args[argument].map(function(e){ return new Date(e["match_date"]).yyyymmdd('-');}));
-            }
-            for(var i = 0; i < timeArray.length; i++){
-                var object = {};
-                object['x'] = new Date(timeArray[i].substr(0, 4), timeArray[i].substr(5, 2)-1, timeArray[i].substr(8, 2));
-                for(var j = 0; j < args.length; j++){
-                    if(mappings[j].indexOf(timeArray[i]) === -1){
-                        if ($scope.hover) object['value'+j] = 0;
-                    } else {
-                        if( Object.prototype.toString.call( field ) === '[object Array]' ) {
-                            var sum = 0;
-                            _.each(field, function(fieldElement){
-                                sum += args[j][mappings[j].indexOf(timeArray[i])][fieldElement];
-                            })
-                            object['value'+j] = sum;
-                        } else  object['value'+j] = args[j][mappings[j].indexOf(timeArray[i])][field];
-                    }
-                }
-                //if(result.length<30)
-                result.push(object);
-            }
-            return result;
-        }
-        $scope.createOptionsObject = function(data, message){
-            var object = {
-                axes: {
-                    x: {key: 'x', labelFunction: function(value) {
-                        var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-                        if($scope.months) return monthNames[value.getMonth()]+' '+value.getDate();
-                        if($scope.weeks) return value.getWeekNumber() + ' week';
-                    }, type: 'date'},
-                    y: {type: 'linear', min: $scope.min, max: getMaxValue(data)}
-                },
-                series: [
-                    {y: 'value0', color: '#e74c3c', thickness: '2px', type: $scope.lineType, striped: true, label: '230'},
-                    {y: 'value1', color: '#34495e', thickness: '2px', type: $scope.lineType, striped: true, label: '851'},
-                    {y: 'value2', color: '#9b59b6', thickness: '2px', type: $scope.lineType, striped: true, label: '2140'},
-                    {y: 'value3', color: '#1abc9c', thickness: '2px', type: $scope.lineType, striped: true, label: '2182'}
-                ],
-                lineMode: $scope.type,
-                tension: $scope.tension,
-                tooltip: {mode: 'scrubber', formatter: function(x, y, series) {if(y === -1) return 'Player ' + series.label + " didn't participate "; return 'Match ' + x.yyyymmdd('/') + ' player '+ series.label + ' : '+ y + ' ' + message;}},
-                drawLegend: true,
-                drawDots: false,
-                columnsHGap: 5
-            }
-            return object;
-        }
         function createC3ArrayAndData(array, number, field, name){
             if($scope.weeks){
                 var groupedByWeek = _.groupBy(array, function(item) {
@@ -106,7 +32,13 @@ angular.module('app', [
                     return {
                         date: createdat,
                         count: _.reduce(invoiceObject, function(m,x) {
-                            return m + x[$scope.fieldMapping[field]];
+                            if( Object.prototype.toString.call( $scope.fieldMapping[field] ) === '[object Array]' ) {
+                                var sum = m;
+                                _.each($scope.fieldMapping[field], function(fieldEntry){
+                                    sum += x[fieldEntry];
+                                })
+                                return sum;
+                            } else return m + x[$scope.fieldMapping[field]];
                         }, 0),
                         time: getDateOfWeek(createdat.split('-')[1], createdat.split('-')[0])
                     };
@@ -122,7 +54,13 @@ angular.module('app', [
                     return {
                         date: createdat,
                         count: _.reduce(invoiceObject, function(m,x) {
-                            return m + x[$scope.fieldMapping[field]];
+                            if( Object.prototype.toString.call( $scope.fieldMapping[field] ) === '[object Array]' ) {
+                                var sum = m;
+                                _.each($scope.fieldMapping[field], function(fieldEntry){
+                                    sum += x[fieldEntry];
+                                })
+                                return sum;
+                            } else return m + x[$scope.fieldMapping[field]];
                         }, 0),
                         time: (new Date(createdat.split('-')[0], createdat.split('-')[1]).getTime())
                     };
@@ -135,13 +73,13 @@ angular.module('app', [
             });
             resultArray.unshift('x'+number);
             var resultArrayData = ar.map(function(e){
-                if( Object.prototype.toString.call( $scope.fieldMapping[field] ) === '[object Array]' ) {
+                /*if( Object.prototype.toString.call( $scope.fieldMapping[field] ) === '[object Array]' ) {
                     var sum = 0;
                     _.each($scope.fieldMapping[field], function(fieldEntry){
                         sum += e[fieldEntry];
                     })
                     return sum;
-                } else return e.count;
+                } else*/ return e.count;
             });
             resultArrayData.unshift(name);
             return {
@@ -160,14 +98,6 @@ angular.module('app', [
             return result;
         }
         $scope.refresh = function(){
-            $scope.penaltyDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, 'penalty_time');
-            $scope.shotsDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, 'shots');
-            $scope.goalsDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, ['ev_goals', 'pp_goals', 'es_goals', 'overtime_goals', 'bullet_goals']);
-            $scope.timeDataInN3 = $scope.fieldDataToN3($scope.timeArray, all, 'gamingtime');
-            $scope.optionsPenalty = $scope.createOptionsObject($scope.penaltyDataInN3, 'seconds');
-            $scope.optionsShots = $scope.createOptionsObject($scope.shotsDataInN3, 'shots');
-            $scope.optionsGoals = $scope.createOptionsObject($scope.goalsDataInN3, ' total goals');
-            $scope.optionsTime = $scope.createOptionsObject($scope.timeDataInN3, ' seconds');
             if($scope.current !== 'time'){
                 var c3FormData = createFieldData($scope.current, all);
                 var objectToGenerate = {
@@ -227,10 +157,6 @@ angular.module('app', [
             $scope[type] = true;
             $scope.refresh();
         }
-        $scope.chooseType = function(type){
-            $scope.type = type;
-            $scope.refresh();
-        }
         $scope.toggleHover = function(){
             if($scope.hover === true) $scope.hover = false;
             else $scope.hover = true;
@@ -240,18 +166,6 @@ angular.module('app', [
         $scope.current = 'penalty';
         $scope.months = true;
         $scope.refresh();
-        /*$scope.$watch('type', function(newval, oldval){
-            $scope.refresh();
-        })
-        $scope.$watch('min', function(newval, oldval){
-            $scope.refresh();
-        })
-        $scope.$watch('tension', function(newval, oldval){
-            $scope.refresh();
-        })
-        $scope.$watch('lineType', function(newval, oldval){
-            $scope.refresh();
-        })*/
         $scope.$watch('typeSecond', function(newval, oldval){
             $scope.refresh();
         })
